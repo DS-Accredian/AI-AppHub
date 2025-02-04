@@ -19,7 +19,7 @@ st.markdown("""
             font-size: 24px;
             font-weight: 600;
             color: #3A7D9B;
-            text-align: left;  /* Left align subtitle */
+            text-align: left;
             margin-bottom: 10px;
         }
         .description {
@@ -31,12 +31,12 @@ st.markdown("""
         }
         .app-card {
             background-color: #F9F9FB;
-            padding: 15px 20px;  /* Smaller padding */
-            border-radius: 10px;  /* Smaller border-radius */
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);  /* Reduced box-shadow */
-            margin-bottom: 15px;  /* Reduced margin */
-            text-align: left;  /* Left align text inside card */
-            max-width: 300px;  /* Set a maximum width to make the card smaller */
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            text-align: left;
+            max-width: 300px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -46,23 +46,23 @@ st.markdown("""
         button {
             background-color: #4A6FA5;
             color: white;
-            padding: 10px 20px;  /* Smaller padding */
+            padding: 10px 20px;
             border: none;
             border-radius: 8px;
-            font-size: 14px;  /* Slightly smaller text size */
+            font-size: 14px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            text-align: center;  /* Center text inside button */
+            text-align: center;
         }
         button:hover {
             background-color: #3A5C82;
         }
         a {
-            text-decoration: none; /* Remove underline from links */
+            text-decoration: none;
         }
-        /* Further decrease the spacing between columns */
-        .css-1d391kg {  /* The class for columns in Streamlit */
-            gap: 0.5rem !important;  /* Set the gap to a very small value */
+        /* Adjust column gap */
+        .css-1d391kg {
+            gap: 1rem !important;  /* Reduced gap between columns */
         }
     </style>
 """, unsafe_allow_html=True)
