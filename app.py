@@ -31,17 +31,17 @@ st.markdown("""
 # Title
 st.markdown("<p class='title'>🚀 AI-Powered Productivity Hub</p>", unsafe_allow_html=True)
 
-st.write("### Access all your AI-powered applications in one place")
+st.write("#### Access all your AI-powered applications in one place")
 
 # App Links
 apps = [
-    ("📚 AI Curriculum Designer - Pankaj", "https://curriculumgenerator-nwbzsv8s3cpmbydkwkmroy.streamlit.app/"),
-    ("📝 AI Article & Blog Creator - Ashish", "https://articlegenerator-3c3a9npfiswj5gv9ecxrnj.streamlit.app/"),
-    ("🎥 Quiz Generator from Class Recordings - Vinay", "https://video-lecture-quiz-automation-wudeyepvkcdzb2m6fv6c48.streamlit.app/"),
-    ("📖 AI Brochure Chatbot - Sushmitha", "https://brochurechatbot-ytwvbk5ayodlbugzva4npo.streamlit.app/"),
-    ("📊 AI Case Study Generator - Ashish", "https://casestudygenerator-uphjrcnc9x2ydywtgcspgx.streamlit.app/"),
-    ("📑 AI PowerPoint Generator - Harshita", "https://ai-ppt-generator-c7zscfcczqcpybexdror68.streamlit.app/"),
-    ("🎨 AI Slide Creator - Harshita", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/")
+    ("📚 AI Curriculum Designer", "https://curriculumgenerator-nwbzsv8s3cpmbydkwkmroy.streamlit.app/"),
+    ("📝 AI Article & Blog Creator ", "https://articlegenerator-3c3a9npfiswj5gv9ecxrnj.streamlit.app/"),
+    ("🎥 Quiz Generator from Class Recordings", "https://video-lecture-quiz-automation-wudeyepvkcdzb2m6fv6c48.streamlit.app/"),
+    ("📖 AI Brochure Chatbot", "https://brochurechatbot-ytwvbk5ayodlbugzva4npo.streamlit.app/"),
+    ("📊 AI Case Study Generator ", "https://casestudygenerator-uphjrcnc9x2ydywtgcspgx.streamlit.app/"),
+    ("📑 AI PowerPoint Generator", "https://ai-ppt-generator-c7zscfcczqcpybexdror68.streamlit.app/"),
+    ("🎨 AI Slide Creator", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/")
 ]
 
 # Display apps in a grid layout
