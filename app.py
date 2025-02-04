@@ -60,6 +60,10 @@ st.markdown("""
         a {
             text-decoration: none; /* Remove underline from links */
         }
+        /* Decrease the spacing between columns */
+        .css-1d391kg {  /* The class for columns in Streamlit */
+            gap: 1rem !important;  /* Reduce the gap between columns */
+        }
     </style>
 """, unsafe_allow_html=True)
 
