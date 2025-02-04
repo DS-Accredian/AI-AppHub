@@ -75,4 +75,18 @@ apps = [
     ("📖 AI Brochure Chatbot:", "https://brochurechatbot-ytwvbk5ayodlbugzva4npo.streamlit.app/"),
     ("📊 AI Case Study Generator:", "https://casestudygenerator-uphjrcnc9x2ydywtgcspgx.streamlit.app/"),
     ("📑 AI PowerPoint Generator:", "https://ai-ppt-generator-c7zscfcczqcpybexdror68.streamlit.app/"),
-    ("🎨 AI Slide Creator:", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.ap
+    ("🎨 AI Slide Creator:", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/")
+]
+
+# Display apps in a grid layout
+cols = st.columns(2)
+for i, (app_name, app_link) in enumerate(apps):
+    with cols[i % 2]:
+        st.markdown(f"""
+        <div class='app-card'>
+            <p class='subtitle'>{app_name}</p>
+            <a href='{app_link}' target='_blank'>
+                <button>Launch App 🚀</button>
+            </a>
+        </div>
+        """, unsafe_allow_html=True)
