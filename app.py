@@ -4,104 +4,70 @@ from PIL import Image
 # Page Configuration
 st.set_page_config(page_title="AI-Powered Tools Hub", page_icon="🎯", layout="wide")
 
-# Custom Styling for a More Professional Look
+# Custom Styling
 st.markdown("""
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-
         .title {
             font-size: 48px;
-            font-weight: 600;
-            color: #2E3B55;
+            font-weight: 700;
+            color: #1D3A5F;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 24px;
+            font-weight: 600;
+            color: #3A7D9B;
+            text-align: left;  /* Left align subtitle */
             margin-bottom: 10px;
         }
-
         .description {
             font-size: 20px;
+            font-weight: 400;
             color: #6C7C93;
             text-align: center;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
             margin-bottom: 40px;
         }
-
-        /* Card Styling */
         .app-card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            text-align: left;
-            transition: transform 0.3s ease-in-out;
-            max-width: 320px;  /* Fixed width for consistency */
+            background-color: #F9F9FB;
+            padding: 15px 20px;  /* Smaller padding */
+            border-radius: 10px;  /* Smaller border-radius */
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);  /* Reduced box-shadow */
+            margin-bottom: 15px;  /* Reduced margin */
+            text-align: left;  /* Left align text inside card */
+            max-width: 300px;  /* Set a maximum width to make the card smaller */
             margin-left: auto;
             margin-right: auto;
         }
-
         .app-card:hover {
-            transform: translateY(-5px);  /* Card lift effect on hover */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  /* Enhanced shadow */
+            transform: translateY(-5px);
         }
-
-        .subtitle {
-            font-size: 18px;
-            font-weight: 600;
-            color: #4A6FA5;
-            text-align: center;  /* Centered the subtitle */
-            margin-bottom: 15px;
-        }
-
         button {
             background-color: #4A6FA5;
             color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 16px;
+            padding: 10px 20px;  /* Smaller padding */
             border: none;
+            border-radius: 8px;
+            font-size: 14px;  /* Slightly smaller text size */
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s ease-in-out;
-            width: 100%;
-            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            text-align: center;  /* Center text inside button */
         }
-
         button:hover {
             background-color: #3A5C82;
-            transform: scale(1.05);  /* Slight zoom effect */
         }
-
         a {
-            text-decoration: none;
+            text-decoration: none; /* Remove underline from links */
         }
-
-        /* Adjust spacing between columns */
-        .css-1d391kg {
-            gap: 30px !important;
-        }
-
-        /* Adjust button width and responsiveness */
-        .stButton>button {
-            width: 100%;
-        }
-
-        /* Adjust the two-column layout */
-        .stGrid {
+        .cols-wrapper {
             display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;  /* Adjusted gap between columns */
         }
-
-        .stGrid > div {
-            flex: 1 1 45%;  /* This ensures equal width for both columns */
-            max-width: 500px;
-            margin-bottom: 30px;  /* Added space between cards */
+        .col {
+            flex: 0 0 48%;  /* Use 48% width for each column */
         }
-
     </style>
 """, unsafe_allow_html=True)
 
@@ -120,15 +86,17 @@ apps = [
     ("🎨 AI Slide Creator:", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/")
 ]
 
-# Display apps in two columns with better alignment
-cols = st.columns(2)  # Create two columns with balanced spacing
+# Display apps in two columns
+st.markdown("<div class='cols-wrapper'>", unsafe_allow_html=True)
 for i, (app_name, app_link) in enumerate(apps):
-    with cols[i % 2]:  # Distribute the cards between the two columns
-        st.markdown(f"""
-        <div class='app-card'>
-            <p class='subtitle'>{app_name}</p>
-            <a href='{app_link}' target='_blank'>
-                <button>Launch App 🚀</button>
-            </a>
+    st.markdown(f"""
+        <div class='col'>
+            <div class='app-card'>
+                <p class='subtitle'>{app_name}</p>
+                <a href='{app_link}' target='_blank'>
+                    <button>Launch App 🚀</button>
+                </a>
+            </div>
         </div>
-        """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+st.markdown("</div>", unsafe_allow_html=True)
