@@ -16,7 +16,7 @@ st.markdown("""
             margin-bottom: 20px;
         }
         .subtitle {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 600;
             color: #3A7D9B;
             text-align: left;  /* Left align subtitle */
@@ -31,11 +31,14 @@ st.markdown("""
         }
         .app-card {
             background-color: #F9F9FB;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            padding: 15px 20px;  /* Smaller padding */
+            border-radius: 10px;  /* Smaller border-radius */
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);  /* Reduced box-shadow */
+            margin-bottom: 15px;  /* Reduced margin */
             text-align: left;  /* Left align text inside card */
+            max-width: 300px;  /* Set a maximum width to make the card smaller */
+            margin-left: auto;
+            margin-right: auto;
         }
         .app-card:hover {
             transform: translateY(-5px);
@@ -43,10 +46,10 @@ st.markdown("""
         button {
             background-color: #4A6FA5;
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px;  /* Smaller padding */
             border: none;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 14px;  /* Slightly smaller text size */
             cursor: pointer;
             transition: background-color 0.3s ease;
             text-align: center;  /* Center text inside button */
@@ -72,18 +75,4 @@ apps = [
     ("📖 AI Brochure Chatbot:", "https://brochurechatbot-ytwvbk5ayodlbugzva4npo.streamlit.app/"),
     ("📊 AI Case Study Generator:", "https://casestudygenerator-uphjrcnc9x2ydywtgcspgx.streamlit.app/"),
     ("📑 AI PowerPoint Generator:", "https://ai-ppt-generator-c7zscfcczqcpybexdror68.streamlit.app/"),
-    ("🎨 AI Slide Creator:", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/")
-]
-
-# Display apps in a grid layout
-cols = st.columns(2)
-for i, (app_name, app_link) in enumerate(apps):
-    with cols[i % 2]:
-        st.markdown(f"""
-        <div class='app-card'>
-            <p class='subtitle'>{app_name}</p>
-            <a href='{app_link}' target='_blank'>
-                <button>Launch App 🚀</button>
-            </a>
-        </div>
-        """, unsafe_allow_html=True)
+    ("🎨 AI Slide Creator:", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.ap
