@@ -60,6 +60,14 @@ st.markdown("""
         a {
             text-decoration: none; /* Remove underline from links */
         }
+        .cols-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;  /* Adjusted gap between columns */
+        }
+        .col {
+            flex: 0 0 48%;  /* Use 48% width for each column */
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -78,15 +86,17 @@ apps = [
     ("🎨 AI Slide Creator:", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/")
 ]
 
-# Display apps in a grid layout
-cols = st.columns(2)
+# Display apps in two columns
+st.markdown("<div class='cols-wrapper'>", unsafe_allow_html=True)
 for i, (app_name, app_link) in enumerate(apps):
-    with cols[i % 2]:
-        st.markdown(f"""
-        <div class='app-card'>
-            <p class='subtitle'>{app_name}</p>
-            <a href='{app_link}' target='_blank'>
-                <button>Launch App 🚀</button>
-            </a>
+    st.markdown(f"""
+        <div class='col'>
+            <div class='app-card'>
+                <p class='subtitle'>{app_name}</p>
+                <a href='{app_link}' target='_blank'>
+                    <button>Launch App 🚀</button>
+                </a>
+            </div>
         </div>
-        """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+st.markdown("</div>", unsafe_allow_html=True)
