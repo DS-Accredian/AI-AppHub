@@ -8,7 +8,7 @@ st.set_page_config(page_title="AI-Powered Tools Hub", page_icon="🎯", layout="
 st.markdown("""
     <style>
         .title {
-            font-size: 42px;
+            font-size: 50px;
             font-weight: bold;
             color: #2E3B55;
             text-align: center;
