@@ -4,96 +4,96 @@ from PIL import Image
 # Page Configuration
 st.set_page_config(page_title="AI-Powered Tools Hub", page_icon="🎯", layout="wide")
 
-# Custom Styling for a Professional Look
+# Custom Styling for a More Professional Look
 st.markdown("""
     <style>
-        /* Apply custom font */
         body {
             font-family: 'Arial', sans-serif;
         }
-        
+
         .title {
             font-size: 48px;
-            font-weight: 700;
+            font-weight: 600;
             color: #2E3B55;
             text-align: center;
             margin-top: 40px;
-            margin-bottom: 20px;
-        }
-        
-        .subtitle {
-            font-size: 22px;
-            font-weight: 600;
-            color: #4A6FA5;
-            text-align: left;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .description {
             font-size: 20px;
-            font-weight: 400;
             color: #6C7C93;
             text-align: center;
-            margin-bottom: 40px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 40px;
         }
 
-        /* Card Design */
+        /* Card Styling */
         .app-card {
-            background-color: #FFFFFF;
+            background-color: #ffffff;
             padding: 20px;
-            border-radius: 15px;  /* Softer, more professional corners */
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
-            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
             text-align: left;
-            max-width: 320px;
+            transition: transform 0.3s ease-in-out;
+            max-width: 320px;  /* Fixed width for consistency */
             margin-left: auto;
             margin-right: auto;
-            transition: all 0.3s ease;  /* Smooth transition for hover effect */
         }
 
         .app-card:hover {
-            transform: translateY(-5px);  /* Hover effect */
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);  /* Enhance shadow on hover */
+            transform: translateY(-5px);  /* Card lift effect on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  /* Enhanced shadow */
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4A6FA5;
+            margin-bottom: 10px;
         }
 
         button {
             background-color: #4A6FA5;
             color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 10px;
+            padding: 12px 20px;
+            border-radius: 8px;
             font-size: 16px;
+            border: none;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            text-align: center;
+            transition: background-color 0.3s, transform 0.2s ease-in-out;
+            width: 100%;
         }
 
         button:hover {
             background-color: #3A5C82;
-            transform: scale(1.05);  /* Slight zoom on hover */
+            transform: scale(1.05);  /* Slight zoom effect */
         }
 
         a {
             text-decoration: none;
         }
 
-        /* Responsive design for columns */
+        /* Adjust spacing between columns */
         .css-1d391kg {
-            gap: 2rem !important;  /* Add more gap between columns for spacing */
+            gap: 30px !important;
         }
 
-        /* Adjust container padding for better layout */
-        .css-1cpxqw2 {
-            padding: 3rem 1rem 1rem 1rem;
-        }
-
-        /* Ensure button text is centered */
+        /* Adjust button width and responsiveness */
         .stButton>button {
             width: 100%;
         }
+
+        /* Responsive columns */
+        .stGrid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
     </style>
 """, unsafe_allow_html=True)
 
@@ -112,8 +112,8 @@ apps = [
     ("🎨 AI Slide Creator:", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/")
 ]
 
-# Display apps in two columns
-cols = st.columns(2)  # Create two columns
+# Display apps in two columns with better alignment
+cols = st.columns(2)  # Create two columns with balanced spacing
 for i, (app_name, app_link) in enumerate(apps):
     with cols[i % 2]:  # Distribute the cards between the two columns
         st.markdown(f"""
