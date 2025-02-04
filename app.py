@@ -36,6 +36,7 @@ st.markdown("""
             box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 20px;
             transition: transform 0.3s ease;
+            text-align: center;  /* Center text inside the card */
         }
         .app-card:hover {
             transform: translateY(-5px);
@@ -49,9 +50,13 @@ st.markdown("""
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-align: center;  /* Ensure button text is centered */
         }
         button:hover {
             background-color: #3A5C82;
+        }
+        a {
+            text-decoration: none; /* Remove underline from links */
         }
     </style>
 """, unsafe_allow_html=True)
@@ -78,6 +83,8 @@ for i, (app_name, app_link) in enumerate(apps):
         st.markdown(f"""
         <div class='app-card'>
             <p class='subtitle'>{app_name}</p>
-            <a href='{app_link}' target='_blank'><button>Launch App 🚀</button></a>
+            <a href='{app_link}' target='_blank'>
+                <button>Launch App 🚀</button>
+            </a>
         </div>
         """, unsafe_allow_html=True)
