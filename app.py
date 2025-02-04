@@ -36,7 +36,7 @@ st.markdown("""
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-align: left;
             transition: transform 0.3s ease-in-out;
             max-width: 320px;  /* Fixed width for consistency */
@@ -53,7 +53,8 @@ st.markdown("""
             font-size: 18px;
             font-weight: 600;
             color: #4A6FA5;
-            margin-bottom: 10px;
+            text-align: center;  /* Centered the subtitle */
+            margin-bottom: 15px;
         }
 
         button {
@@ -66,6 +67,7 @@ st.markdown("""
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s ease-in-out;
             width: 100%;
+            margin-top: 10px;
         }
 
         button:hover {
@@ -87,11 +89,17 @@ st.markdown("""
             width: 100%;
         }
 
-        /* Responsive columns */
+        /* Adjust the two-column layout */
         .stGrid {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             flex-wrap: wrap;
+        }
+
+        .stGrid > div {
+            flex: 1 1 45%;  /* This ensures equal width for both columns */
+            max-width: 500px;
+            margin-bottom: 30px;  /* Added space between cards */
         }
 
     </style>
