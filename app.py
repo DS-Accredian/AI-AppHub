@@ -31,12 +31,12 @@ st.markdown("""
         }
         .app-card {
             background-color: #F9F9FB;
-            padding: 15px 20px;  /* Smaller padding */
-            border-radius: 10px;  /* Smaller border-radius */
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);  /* Reduced box-shadow */
-            margin-bottom: 15px;  /* Reduced margin */
+            padding: 20px 30px;  /* Increased padding */
+            border-radius: 12px;  /* Increased border-radius */
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.1);  /* Increased box-shadow */
+            margin-bottom: 20px;  /* Increased margin */
             text-align: left;  /* Left align text inside card */
-            max-width: 300px;  /* Set a maximum width to make the card smaller */
+            max-width: 400px;  /* Increased maximum width */
             margin-left: auto;
             margin-right: auto;
         }
@@ -46,10 +46,10 @@ st.markdown("""
         button {
             background-color: #4A6FA5;
             color: white;
-            padding: 10px 20px;  /* Smaller padding */
+            padding: 12px 25px;  /* Adjusted padding */
             border: none;
             border-radius: 8px;
-            font-size: 14px;  /* Slightly smaller text size */
+            font-size: 16px;  /* Adjusted text size */
             cursor: pointer;
             transition: background-color 0.3s ease;
             text-align: center;  /* Center text inside button */
