@@ -19,8 +19,8 @@ st.markdown("""
             font-size: 28px;
             font-weight: 600;
             color: #3A7D9B;
-            text-align: center;
-            margin-bottom: 15px;
+            text-align: left;  /* Left align subtitle */
+            margin-bottom: 10px;
         }
         .description {
             font-size: 20px;
@@ -35,8 +35,7 @@ st.markdown("""
             border-radius: 15px;
             box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 20px;
-            transition: transform 0.3s ease;
-            text-align: center;  /* Center text inside the card */
+            text-align: left;  /* Left align text inside card */
         }
         .app-card:hover {
             transform: translateY(-5px);
@@ -50,7 +49,7 @@ st.markdown("""
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            text-align: center;  /* Ensure button text is centered */
+            text-align: center;  /* Center text inside button */
         }
         button:hover {
             background-color: #3A5C82;
