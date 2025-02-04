@@ -8,22 +8,50 @@ st.set_page_config(page_title="AI-Powered Tools Hub", page_icon="🎯", layout="
 st.markdown("""
     <style>
         .title {
-            font-size: 36px;
-            font-weight: bold;
-            color: #2E3B55;
+            font-size: 48px;
+            font-weight: 700;
+            color: #1D3A5F;
             text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         .subtitle {
-            font-size: 24px;
-            font-weight: bold;
-            color: #4A6FA5;
+            font-size: 28px;
+            font-weight: 600;
+            color: #3A7D9B;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .description {
+            font-size: 20px;
+            font-weight: 400;
+            color: #6C7C93;
+            text-align: center;
+            margin-bottom: 40px;
         }
         .app-card {
-            background-color: #F4F6F8;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 15px;
+            background-color: #F9F9FB;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+        button {
+            background-color: #4A6FA5;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #3A5C82;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -31,7 +59,6 @@ st.markdown("""
 # Title and Description
 st.markdown("<p class='title'>🚀 AI-Powered Productivity Hub</p>", unsafe_allow_html=True)
 st.markdown("<p class='description'>Access all your AI-powered applications in one place</p>", unsafe_allow_html=True)
-
 
 # App Links
 apps = [
@@ -51,6 +78,6 @@ for i, (app_name, app_link) in enumerate(apps):
         st.markdown(f"""
         <div class='app-card'>
             <p class='subtitle'>{app_name}</p>
-            <a href='{app_link}' target='_blank'><button style='background-color:#4A6FA5;color:white;padding:10px 20px;border:none;border-radius:5px;'>Launch App 🚀</button></a>
+            <a href='{app_link}' target='_blank'><button>Launch App 🚀</button></a>
         </div>
         """, unsafe_allow_html=True)
