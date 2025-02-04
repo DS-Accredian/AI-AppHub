@@ -4,65 +4,95 @@ from PIL import Image
 # Page Configuration
 st.set_page_config(page_title="AI-Powered Tools Hub", page_icon="🎯", layout="wide")
 
-# Custom Styling
+# Custom Styling for a Professional Look
 st.markdown("""
     <style>
+        /* Apply custom font */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        
         .title {
             font-size: 48px;
             font-weight: 700;
-            color: #1D3A5F;
+            color: #2E3B55;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 40px;
             margin-bottom: 20px;
         }
+        
         .subtitle {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 600;
-            color: #3A7D9B;
+            color: #4A6FA5;
             text-align: left;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
+
         .description {
             font-size: 20px;
             font-weight: 400;
             color: #6C7C93;
             text-align: center;
             margin-bottom: 40px;
-        }
-        .app-card {
-            background-color: #F9F9FB;
-            padding: 15px 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-            margin-bottom: 15px;
-            text-align: left;
-            max-width: 300px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
-        .app-card:hover {
-            transform: translateY(-5px);
+
+        /* Card Design */
+        .app-card {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 15px;  /* Softer, more professional corners */
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+            margin-bottom: 25px;
+            text-align: left;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 0.3s ease;  /* Smooth transition for hover effect */
         }
+
+        .app-card:hover {
+            transform: translateY(-5px);  /* Hover effect */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);  /* Enhance shadow on hover */
+        }
+
         button {
             background-color: #4A6FA5;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 8px;
-            font-size: 14px;
+            border-radius: 10px;
+            font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             text-align: center;
         }
+
         button:hover {
             background-color: #3A5C82;
+            transform: scale(1.05);  /* Slight zoom on hover */
         }
+
         a {
             text-decoration: none;
         }
-        /* Adjust column gap */
+
+        /* Responsive design for columns */
         .css-1d391kg {
-            gap: 1rem !important;  /* Reduced gap between columns */
+            gap: 2rem !important;  /* Add more gap between columns for spacing */
+        }
+
+        /* Adjust container padding for better layout */
+        .css-1cpxqw2 {
+            padding: 3rem 1rem 1rem 1rem;
+        }
+
+        /* Ensure button text is centered */
+        .stButton>button {
+            width: 100%;
         }
     </style>
 """, unsafe_allow_html=True)
