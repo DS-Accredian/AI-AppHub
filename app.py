@@ -120,28 +120,28 @@ tools = [
         "name": "AI Article & Blog Creator",
         "icon": "📝",
         "url": "https://articlegenerator-3c3a9npfiswj5gv9ecxrnj.streamlit.app/",
-        "description": "Generate engaging articles and blog posts with AI",
+        "description": "Generate engaging articles with AI",
         "category": "Content"
     },
     {
         "name": "Quiz Generator",
         "icon": "🎥",
         "url": "https://video-lecture-quiz-automation-wudeyepvkcdzb2m6fv6c48.streamlit.app/",
-        "description": "Create quizzes from video lecture recordings automatically",
+        "description": "Create quizzes and notes from video lecture recordings transcripts automatically",
         "category": "Education"
     },
     {
         "name": "AI Brochure Chatbot",
         "icon": "📖",
         "url": "https://brochurechatbot-ytwvbk5ayodlbugzva4npo.streamlit.app/",
-        "description": "Interactive chatbot for brochure content creation",
+        "description": "Interactive chatbot to chat with brochure contents",
         "category": "Marketing"
     },
     {
         "name": "AI Case Study Generator",
         "icon": "📊",
         "url": "https://casestudygenerator-uphjrcnc9x2ydywtgcspgx.streamlit.app/",
-        "description": "Generate detailed case studies with AI analysis",
+        "description": "Generate detailed case studies with Solutions",
         "category": "Business"
     },
     {
@@ -155,7 +155,7 @@ tools = [
         "name": "AI Slide Creator",
         "icon": "🎨",
         "url": "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/",
-        "description": "Design beautiful presentation slides with AI",
+        "description": "Design presentation slides with AI",
         "category": "Design"
     }
 ]
