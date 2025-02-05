@@ -29,11 +29,11 @@ st.markdown("""
             margin-bottom: 40px;
         }
         .grid-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 40px;
+            justify-content: center;
         }
         .app-card {
             background-color: #ffffff;
@@ -41,7 +41,6 @@ st.markdown("""
             border-radius: 16px;
             box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
             text-align: center;
-            width: 260px;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         .app-card:hover {
@@ -49,8 +48,8 @@ st.markdown("""
             box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
         }
         .app-icon {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             margin-bottom: 10px;
         }
         .app-name {
@@ -62,10 +61,10 @@ st.markdown("""
         .launch-button {
             background-color: #1A73E8;
             color: white;
-            padding: 12px 20px;
+            padding: 10px 18px;
             border: none;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 14px;
             cursor: pointer;
             transition: background-color 0.3s ease;
             text-decoration: none;
@@ -81,8 +80,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title and Description
-st.markdown("<p class='title'>🚀 AI-Powered Productivity Hub</p>", unsafe_allow_html=True)
-st.markdown("<p class='description'>Access all your AI-powered applications in one place</p>", unsafe_allow_html=True)
+st.markdown("<p class='title'>AI-Powered Productivity Hub</p>", unsafe_allow_html=True)
+st.markdown("<p class='description'>Discover and access AI tools seamlessly</p>", unsafe_allow_html=True)
 
 # App Links with Icons
 apps = [
@@ -95,14 +94,14 @@ apps = [
     ("AI Slide Creator", "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/", "https://cdn-icons-png.flaticon.com/512/2702/2702133.png")
 ]
 
-# Display apps in a grid layout
+# Display apps in a structured grid layout
 st.markdown("<div class='grid-container'>", unsafe_allow_html=True)
 for app_name, app_link, app_icon in apps:
     st.markdown(f"""
         <div class='app-card'>
             <img src='{app_icon}' class='app-icon' />
             <p class='app-name'>{app_name}</p>
-            <a href='{app_link}' target='_blank' class='launch-button'>Launch App 🚀</a>
+            <a href='{app_link}' target='_blank' class='launch-button'>Launch 🚀</a>
         </div>
     """, unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
