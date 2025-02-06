@@ -21,6 +21,29 @@ st.markdown("""
         border-bottom: 1px solid #e5e7eb;
         display: flex;
         align-items: center;
+        margin-top: 1rem;
+    }
+    
+    /* Search bar */
+    .search-container {
+        max-width: 600px;
+        margin: 2rem 0;  /* Changed from auto to 0 to align left */
+    }
+    
+    .stTextInput > div > div > input {
+        padding: 1rem 1rem 1rem 3rem !important;
+        border-radius: 9999px !important;
+        border: 1px solid #e5e7eb !important;
+        font-size: 1.125rem !important;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+        width: 100% !important;
+        max-width: 600px !important;
+        margin: 0 !important;  /* Changed from auto to 0 to align left */
+    }
+    
+    .stTextInput > div > div > input:focus {
+        border-color: #4285f4 !important;
+        box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2) !important;
     }
     
     /* Category buttons */
@@ -168,6 +191,15 @@ tools = [
     }
 ]
 
+# Create columns for search bar to align it to the left
+left_col, right_col = st.columns([1, 2])
+
+# Search bar (in left column)
+with left_col:
+    st.markdown('<div class="search-container">', unsafe_allow_html=True)
+    search_query = st.text_input("", placeholder="Search AI tools", key="search")
+    st.markdown('</div>', unsafe_allow_html=True)
+
 # Header
 st.markdown('<div class="header"><h1>🚀 AI Tools</h1></div>', unsafe_allow_html=True)
 
@@ -186,10 +218,12 @@ for i, category in enumerate(categories):
     ):
         st.session_state.selected_category = category
 
-# Filter tools based on category
+# Filter tools based on search and category
 filtered_tools = [
     tool for tool in tools
-    if selected_category == "All" or tool["category"] == selected_category
+    if (search_query.lower() in tool["name"].lower() or 
+        search_query.lower() in tool["description"].lower()) and
+    (selected_category == "All" or tool["category"] == selected_category)
 ]
 
 # Display tools in a grid
