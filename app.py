@@ -23,20 +23,6 @@ st.markdown("""
         align-items: center;
     }
     
-    /* Search bar */
-    .stTextInput > div > div > input {
-        padding: 1rem 1rem 1rem 3rem !important;
-        border-radius: 9999px !important;
-        border: 1px solid #e5e7eb !important;
-        font-size: 1.125rem !important;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
-    }
-    
-    .stTextInput > div > div > input:focus {
-        border-color: #4285f4 !important;
-        box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2) !important;
-    }
-    
     /* Category buttons */
     .stButton > button {
         background-color: transparent !important;
@@ -185,20 +171,6 @@ tools = [
 # Header
 st.markdown('<div class="header"><h1>🚀 AI Tools</h1></div>', unsafe_allow_html=True)
 
-# Initialize search query if not in session state
-if 'search_query' not in st.session_state:
-    st.session_state['search_query'] = ""
-
-# Search bar
-search_query = st.text_input("", placeholder="Search AI tools", key="search")
-
-# Update the session state when a new query is entered
-if search_query:
-    st.session_state['search_query'] = search_query
-
-# Use the session state value for the search query
-search_query = st.session_state['search_query']
-
 # Categories
 categories = ["All"] + list(set(tool["category"] for tool in tools))
 cols = st.columns(len(categories))
@@ -214,12 +186,10 @@ for i, category in enumerate(categories):
     ):
         st.session_state.selected_category = category
 
-# Filter tools based on search and category
+# Filter tools based on category
 filtered_tools = [
     tool for tool in tools
-    if (search_query.lower() in tool["name"].lower() or 
-        search_query.lower() in tool["description"].lower()) and
-    (selected_category == "All" or tool["category"] == selected_category)
+    if selected_category == "All" or tool["category"] == selected_category
 ]
 
 # Display tools in a grid
