@@ -20,12 +20,7 @@ st.markdown("""
         padding: 1.5rem 0;
         border-bottom: 1px solid #e5e7eb;
         display: flex;
-        justify-content: space-between;  /* Space between heading and search bar */
         align-items: center;
-    }
-    
-    .header h1 {
-        margin: 0;
     }
     
     /* Search bar */
@@ -35,7 +30,6 @@ st.markdown("""
         border: 1px solid #e5e7eb !important;
         font-size: 1.125rem !important;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
-        width: 300px;  /* Set a fixed width */
     }
     
     .stTextInput > div > div > input:focus {
@@ -189,7 +183,21 @@ tools = [
 ]
 
 # Header
-st.markdown('<div class="header"><h1>🚀 AI Tools</h1><div>{}</div></div>'.format(st.text_input("", placeholder="Search AI tools", key="search")), unsafe_allow_html=True)
+st.markdown('<div class="header"><h1>🚀 AI Tools</h1></div>', unsafe_allow_html=True)
+
+# Initialize search query if not in session state
+if 'search_query' not in st.session_state:
+    st.session_state['search_query'] = ""
+
+# Search bar
+search_query = st.text_input("", placeholder="Search AI tools", key="search")
+
+# Update the session state when a new query is entered
+if search_query:
+    st.session_state['search_query'] = search_query
+
+# Use the session state value for the search query
+search_query = st.session_state['search_query']
 
 # Categories
 categories = ["All"] + list(set(tool["category"] for tool in tools))
