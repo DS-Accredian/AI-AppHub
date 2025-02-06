@@ -156,7 +156,7 @@ tools = [
         "name": "AI Brochure Chatbot",
         "icon": "📖",
         "url": "https://brochurechatbot-ytwvbk5ayodlbugzva4npo.streamlit.app/",
-        "description": "Interactive chatbot for brochure content creation",
+        "description": "Interactive chatbot to chat with brochure contents",
         "category": "Marketing"
     },
     {
