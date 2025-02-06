@@ -63,12 +63,17 @@ st.markdown("""
     /* Tool cards */
     .tool-card {
         background-color: white;
-        padding: 1.5rem;
+        padding: 2rem;
         border-radius: 0.75rem;
         border: 1px solid #e5e7eb;
         text-align: center;
         transition: all 0.3s;
         margin-bottom: 1rem;
+        height: 280px;  /* Fixed height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .tool-card:hover {
@@ -77,21 +82,36 @@ st.markdown("""
     }
     
     .tool-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .tool-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
     }
     
     .tool-name {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         font-weight: 500;
         color: #111827;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
     }
     
     .tool-description {
         font-size: 0.875rem;
         color: #6b7280;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        flex-grow: 1;
     }
     
     .learn-more {
@@ -99,6 +119,8 @@ st.markdown("""
         font-size: 0.875rem;
         font-weight: 500;
         text-decoration: none;
+        padding-top: 1rem;
+        display: inline-block;
     }
     
     .learn-more:hover {
@@ -120,28 +142,28 @@ tools = [
         "name": "AI Article & Blog Creator",
         "icon": "📝",
         "url": "https://articlegenerator-3c3a9npfiswj5gv9ecxrnj.streamlit.app/",
-        "description": "Generate engaging articles & blogs using AI",
+        "description": "Generate engaging articles and blog posts with AI",
         "category": "Content"
     },
     {
         "name": "Quiz Generator",
         "icon": "🎥",
         "url": "https://video-lecture-quiz-automation-wudeyepvkcdzb2m6fv6c48.streamlit.app/",
-        "description": "Create quizzes and notes from video lecture recordings transcripts automatically",
+        "description": "Create quizzes from video lecture recordings automatically",
         "category": "Education"
     },
     {
         "name": "AI Brochure Chatbot",
         "icon": "📖",
         "url": "https://brochurechatbot-ytwvbk5ayodlbugzva4npo.streamlit.app/",
-        "description": "Interactive chatbot to chat with brochure contents",
+        "description": "Interactive chatbot for brochure content creation",
         "category": "Marketing"
     },
     {
         "name": "AI Case Study Generator",
         "icon": "📊",
         "url": "https://casestudygenerator-uphjrcnc9x2ydywtgcspgx.streamlit.app/",
-        "description": "Generate detailed case studies with Solutions",
+        "description": "Generate detailed case studies with AI analysis",
         "category": "Business"
     },
     {
@@ -155,13 +177,13 @@ tools = [
         "name": "AI Slide Creator",
         "icon": "🎨",
         "url": "https://app-slide-creator-2ttekw79kny684bx27auph.streamlit.app/",
-        "description": "Design presentation slides with AI",
+        "description": "Design beautiful presentation slides with AI",
         "category": "Design"
     }
 ]
 
 # Header
-st.markdown('<div class="header"><h1>🚀AI Tools by Accredian</h1></div>', unsafe_allow_html=True)
+st.markdown('<div class="header"><h1>🚀 AI Tools</h1></div>', unsafe_allow_html=True)
 
 # Search bar
 search_query = st.text_input("", placeholder="Search AI tools", key="search")
@@ -197,9 +219,13 @@ for i, tool in enumerate(filtered_tools):
         <a href="{tool['url']}" target="_blank" style="text-decoration: none;">
             <div class="tool-card">
                 <div class="tool-icon">{tool['icon']}</div>
-                <div class="tool-name">{tool['name']}</div>
-                <div class="tool-description">{tool['description']}</div>
-                <div class="learn-more">Learn more →</div>
+                <div class="tool-content">
+                    <div>
+                        <div class="tool-name">{tool['name']}</div>
+                        <div class="tool-description">{tool['description']}</div>
+                    </div>
+                    <div class="learn-more">Learn more →</div>
+                </div>
             </div>
         </a>
         """, unsafe_allow_html=True)
