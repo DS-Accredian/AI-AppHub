@@ -168,7 +168,7 @@ tools = [
 ]
 
 # Header
-st.markdown('<div class="header"><h1>🚀AI Tools by Accredian</h1></div>', unsafe_allow_html=True)
+st.markdown('<div class="header"><h1>🚀EduAgentX</h1></div>', unsafe_allow_html=True)
 
 # Search bar
 search_query = st.text_input("", placeholder="Search AI tools", key="search")
