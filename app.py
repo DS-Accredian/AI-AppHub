@@ -120,7 +120,7 @@ tools = [
         "name": "AI Article & Blog Creator",
         "icon": "📝",
         "url": "https://articlegenerator-3c3a9npfiswj5gv9ecxrnj.streamlit.app/",
-        "description": "Generate engaging articles & blogs using AI",
+        "description": "Generate engaging articles & blog posts using AI Agents",
         "category": "Content"
     },
     {
