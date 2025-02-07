@@ -168,7 +168,7 @@ tools = [
 ]
 
 # Header
-st.markdown('<div class="center" class="header"><h1>🚀EduAgentX </h1></div>', unsafe_allow_html=True)
+st.markdown('<div align="center" class="header"><h1>🚀EduAgentX </h1></div>', unsafe_allow_html=True)
 
 # Search bar
 search_query = st.text_input("", placeholder="Search AI tools", key="search")
