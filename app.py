@@ -141,28 +141,28 @@ tools = [
         "name": "AI Case Study Generator",
         "icon": "📊",
         "url": "https://casestudygenerator-uphjrcnc9x2ydywtgcspgx.streamlit.app/",
-        "description": "Generate detailed case studies with Solutions",
+        "description": "Generate detailed case studies with Solutions using AI Agents",
         "category": "Business"
     },
     {
         "name": "AI PowerPoint Generator",
         "icon": "📑",
         "url": "https://ai-powered-ppt-generator-hljimuo9pwpp6sucjekbds.streamlit.app/",
-        "description": "Create professional presentations automatically",
+        "description": "Create professional presentations automatically using AI Agents",
         "category": "Productivity"
     },
     {
         "name": "Pre-reads Generator",
         "icon": "📖",
         "url": "https://pre-read-generator-9tihairmalelqgt6xzvy4u.streamlit.app/",
-        "description": "Generate pre-reading materials efficiently",
+        "description": "Generate pre-read materials efficiently using AI Agents",
         "category": "Education"
     },
     {
         "name": "Post-read Generator",
         "icon": "📘",
         "url": "https://post-read-generator-tfifkkxmmmks5y6thvm5ls.streamlit.app/",
-        "description": "Create post-reading summaries and insights",
+        "description": "Generate post-read materials efficiently using AI Agents",
         "category": "Education"
     }
 ]
