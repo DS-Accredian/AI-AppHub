@@ -125,7 +125,7 @@ st.markdown("""
 
 /* Tooltip styles */
 .disabled::before {
-    content: "This card is disabled"; /* Tooltip text */
+    content: "Feature is being Developed"; /* Tooltip text */
     position: absolute;
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
