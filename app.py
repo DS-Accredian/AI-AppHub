@@ -106,9 +106,21 @@ st.markdown("""
     }
      /* Translucent effect for in-development tools */
     .disabled {
-        opacity: 0.4;
-        pointer-events: none;
-    }
+    position: relative; /* Ensure positioning for the overlay */
+    opacity: 0.6;
+   }
+
+.disabled::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.5); /* Grey overlay with transparency */
+    pointer-events: none; /* Ensures the overlay doesn’t block interactions */
+    border-radius: inherit; /* Inherits the border-radius of the card */
+   }
 </style>
 """, unsafe_allow_html=True)
 
