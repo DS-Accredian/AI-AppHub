@@ -226,7 +226,7 @@ tools = [
         "disabled": True
     },
     {
-        "name": "Personalized Road-map Generator",
+        "name": "Personalized Roadmap Generator",
         "icon": "🔒",
         "url": "#",
         "description": "In Development",
