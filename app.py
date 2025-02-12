@@ -211,7 +211,7 @@ tools = [
     },
      {
         "name": "Validate Brochure & Website Data",
-        "icon": "📄",  # Document-related icon
+        "icon": "📑",  # Bookmark tab symbol for data validation
         "url": "#",
         "description": "In Development",
         "category": "In Development",
@@ -219,7 +219,7 @@ tools = [
     },
     {
         "name": "Chat with Session Recording",
-        "icon": "💬🔴",  # Chat + recording indicator
+        "icon": "💬🎥",  # Chat bubble + video camera for session recording
         "url": "#",
         "description": "In Development",
         "category": "In Development",
@@ -227,7 +227,7 @@ tools = [
     },
     {
         "name": "Personalized Roadmap Generator",
-        "icon": "🛣️",  # Roadmap icon
+        "icon": "🗺️",  # Map icon for roadmap generation
         "url": "#",
         "description": "In Development",
         "category": "In Development",
@@ -235,7 +235,7 @@ tools = [
     },
     {
         "name": "Personalized TA",
-        "icon": "🎓",  # Education/TA-related icon
+        "icon": "👨‍🏫",  # Teacher/professor icon representing TA
         "url": "#",
         "description": "In Development",
         "category": "In Development",
