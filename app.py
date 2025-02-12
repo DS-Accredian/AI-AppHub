@@ -164,7 +164,7 @@ tools = [
         "url": "https://post-read-generator-tfifkkxmmmks5y6thvm5ls.streamlit.app/",
         "description": "Generate post-read materials efficiently using AI Agents",
         "category": "Education"
-    }
+    },
     {
         "name": "Brochure and Website Data Validator",
         "icon": "🔒",
