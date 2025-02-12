@@ -106,7 +106,7 @@ st.markdown("""
     }
      /* Translucent effect for in-development tools */
     .disabled {
-        opacity: 0.87;
+        opacity: 0.3;
         pointer-events: none;
     }
 </style>
