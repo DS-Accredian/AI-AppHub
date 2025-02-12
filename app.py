@@ -168,24 +168,28 @@ tools = [
     {
         "name": "Brochure and Website Data Validator",
         "icon": "🔒",
+        "url": "https://ai-powered-ppt-generator-4rqdhcbd7t97rcg6ypfbpx.streamlit.app/",
         "description": "In Development",
         "category": "In Development"
     },
     {
         "name": "Chat with Session Recording",
         "icon": "🔒",
+        "url": "https://ai-powered-ppt-generator-4rqdhcbd7t97rcg6ypfbpx.streamlit.app/",
         "description": "In Development",
         "category": "In Development"
     },
     {
         "name": "Personalized Road-map Generator",
         "icon": "🔒",
+        "url": "https://ai-powered-ppt-generator-4rqdhcbd7t97rcg6ypfbpx.streamlit.app/",
         "description": "In Development",
         "category": "In Development"
     },
     {
         "name": "Personalized TA",
         "icon": "🔒",
+        "url": "https://ai-powered-ppt-generator-4rqdhcbd7t97rcg6ypfbpx.streamlit.app/"
         "description": "In Development",
         "category": "In Development"
     }
