@@ -104,6 +104,11 @@ st.markdown("""
     .learn-more:hover {
         color: #1a73e8;
     }
+     /* Translucent effect for in-development tools */
+    .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -230,10 +235,11 @@ filtered_tools = [
 
 # Display tools in a grid
 cols = st.columns(4)
-for i, tool in enumerate(filtered_tools):
+for i, tool in enumerate(tools):
+    disabled_class = "disabled" if tool.get("disabled") else ""
     with cols[i % 4]:
         st.markdown(f"""
-        <a href="{tool['url']}" target="_blank" style="text-decoration: none;">
+        <a href="{tool['url']}" target="_blank" class="{disabled_class}" style="text-decoration: none;">
             <div class="tool-card">
                 <div class="tool-icon">{tool['icon']}</div>
                 <div class="tool-name">{tool['name']}</div>
