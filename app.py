@@ -122,79 +122,7 @@ tools = [
         "url": "https://articlegenerator-3c3a9npfiswj5gv9ecxrnj.streamlit.app/",
         "description": "Generate engaging articles & blog posts using AI Agents",
         "category": "Content"
-    },
-    {
-        "name": "Quiz Generator",
-        "icon": "🎥",
-        "url": "https://video-lecture-quiz-automation-uwhmhmrebcfotmnuth6c2j.streamlit.app/",
-        "description": "Create quizzes and notes from video lecture recordings transcripts automatically",
-        "category": "Education"
-    },
-    {
-        "name": "AI Brochure Chatbot",
-        "icon": "📖",
-        "url": "https://brochure-n8jkhj2gvjmzvjz8sw2wdb.streamlit.app/",
-        "description": "Interactive chatbot to chat with brochure contents",
-        "category": "Marketing"
-    },
-    {
-        "name": "AI Case Study Generator",
-        "icon": "📊",
-        "url": "https://casestudygenerator-uphjrcnc9x2ydywtgcspgx.streamlit.app/",
-        "description": "Generate detailed case studies with Solutions using AI Agents",
-        "category": "Business"
-    },
-    {
-        "name": "AI PowerPoint Generator",
-        "icon": "📑",
-        "url": "https://ai-powered-ppt-generator-4rqdhcbd7t97rcg6ypfbpx.streamlit.app/",
-        "description": "Create professional presentations automatically using AI Agents",
-        "category": "Productivity"
-    },
-    {
-        "name": "Pre-reads Generator",
-        "icon": "📖",
-        "url": "https://pre-read-generator-9tihairmalelqgt6xzvy4u.streamlit.app/",
-        "description": "Generate pre-read materials efficiently using AI Agents",
-        "category": "Education"
-    },
-    {
-        "name": "Post-read Generator",
-        "icon": "📘",
-        "url": "https://post-read-generator-tfifkkxmmmks5y6thvm5ls.streamlit.app/",
-        "description": "Generate post-read materials efficiently using AI Agents",
-        "category": "Education"
     }
-
-    {
-        "name": "Brochure and Website Data Validator",
-        "icon": "🔒",
-        "url": "https://post-read-generator-tfifkkxmmmks5y6thvm5ls.streamlit.app/",
-        "description": "In Development",
-        "category": "In Development"
-    }
-    {
-        "name": "Chat with Session Recording",
-        "icon": "🔒",
-        "url": "https://post-read-generator-tfifkkxmmmks5y6thvm5ls.streamlit.app/",
-        "description": "In Development",
-        "category": "In Development"
-    }
-    {
-        "name": "Personalized Road-map Generator",
-        "icon": "🔒",
-        "url": "https://post-read-generator-tfifkkxmmmks5y6thvm5ls.streamlit.app/",
-        "description": "In Development",
-        "category": "In Development"
-    }
-    {
-        "name": "Personalized TA",
-        "icon": "🔒",
-        "url": "https://post-read-generator-tfifkkxmmmks5y6thvm5ls.streamlit.app/",
-        "description": "In Development",
-        "category": "In Development"
-    }
-
 ]
 
 # Header
