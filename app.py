@@ -106,10 +106,11 @@ st.markdown("""
     }
      /* Translucent effect for in-development tools */
     .disabled {
-    position: relative; /* Ensure positioning for the overlay */
+    position: relative; /* Ensure positioning for the tooltip */
     opacity: 0.6;
-   }
+}
 
+/* Grey overlay */
 .disabled::after {
     content: "";
     position: absolute;
@@ -120,30 +121,33 @@ st.markdown("""
     background: rgba(128, 128, 128, 0.5); /* Grey overlay with transparency */
     pointer-events: none; /* Ensures the overlay doesn’t block interactions */
     border-radius: inherit; /* Inherits the border-radius of the card */
-   }
-   /* Tooltip styles */
+}
+
+/* Tooltip styles */
 .disabled::before {
     content: "This card is disabled"; /* Tooltip text */
     position: absolute;
-    bottom: 110%; /* Position above the card */
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure perfect centering */
     background: black;
     color: white;
-    padding: 6px 10px;
-    font-size: 12px;
+    padding: 8px 12px;
+    font-size: 14px;
     border-radius: 4px;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
-  }
+    z-index: 10; /* Ensure tooltip is above overlay */
+}
 
 /* Show tooltip on hover */
 .disabled:hover::before {
     opacity: 1;
     visibility: visible;
-  }
+}
+
 </style>
 """, unsafe_allow_html=True)
 
