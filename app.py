@@ -104,12 +104,6 @@ st.markdown("""
     .learn-more:hover {
         color: #1a73e8;
     }
-    
-    /* Translucent effect for in-development tools */
-    .disabled {
-        opacity: 0.5;
-        pointer-events: none;
-    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -128,6 +122,48 @@ tools = [
         "url": "https://articlegenerator-3c3a9npfiswj5gv9ecxrnj.streamlit.app/",
         "description": "Generate engaging articles & blog posts using AI Agents",
         "category": "Content"
+    },
+    {
+        "name": "Quiz Generator",
+        "icon": "🎥",
+        "url": "https://video-lecture-quiz-automation-uwhmhmrebcfotmnuth6c2j.streamlit.app/",
+        "description": "Create quizzes and notes from video lecture recordings transcripts automatically",
+        "category": "Education"
+    },
+    {
+        "name": "AI Brochure Chatbot",
+        "icon": "📖",
+        "url": "https://brochure-n8jkhj2gvjmzvjz8sw2wdb.streamlit.app/",
+        "description": "Interactive chatbot to chat with brochure contents",
+        "category": "Marketing"
+    },
+    {
+        "name": "AI Case Study Generator",
+        "icon": "📊",
+        "url": "https://casestudygenerator-uphjrcnc9x2ydywtgcspgx.streamlit.app/",
+        "description": "Generate detailed case studies with Solutions using AI Agents",
+        "category": "Business"
+    },
+    {
+        "name": "AI PowerPoint Generator",
+        "icon": "📑",
+        "url": "https://ai-powered-ppt-generator-4rqdhcbd7t97rcg6ypfbpx.streamlit.app/",
+        "description": "Create professional presentations automatically using AI Agents",
+        "category": "Productivity"
+    },
+    {
+        "name": "Pre-reads Generator",
+        "icon": "📖",
+        "url": "https://pre-read-generator-9tihairmalelqgt6xzvy4u.streamlit.app/",
+        "description": "Generate pre-read materials efficiently using AI Agents",
+        "category": "Education"
+    },
+    {
+        "name": "Post-read Generator",
+        "icon": "📘",
+        "url": "https://post-read-generator-tfifkkxmmmks5y6thvm5ls.streamlit.app/",
+        "description": "Generate post-read materials efficiently using AI Agents",
+        "category": "Education"
     },
     {
         "name": "Brochure and Website Data Validator",
@@ -163,13 +199,41 @@ tools = [
     }
 ]
 
+# Header
+st.markdown('<div align="center" class="header"><h1>🚀EduAgentX </h1></div>', unsafe_allow_html=True)
+
+# Search bar
+search_query = st.text_input("", placeholder="Search AI tools", key="search")
+
+# Categories
+categories = ["All"] + list(set(tool["category"] for tool in tools))
+cols = st.columns(len(categories))
+selected_category = st.session_state.get("selected_category", "All")
+
+for i, category in enumerate(categories):
+    if cols[i].button(
+        category,
+        key=category,
+        help=f"Show {category.lower()} tools",
+        type="secondary",
+        use_container_width=True,
+    ):
+        st.session_state.selected_category = category
+
+# Filter tools based on search and category
+filtered_tools = [
+    tool for tool in tools
+    if (search_query.lower() in tool["name"].lower() or 
+        search_query.lower() in tool["description"].lower()) and
+    (selected_category == "All" or tool["category"] == selected_category)
+]
+
 # Display tools in a grid
 cols = st.columns(4)
-for i, tool in enumerate(tools):
-    disabled_class = "disabled" if tool.get("disabled") else ""
+for i, tool in enumerate(filtered_tools):
     with cols[i % 4]:
         st.markdown(f"""
-        <a href="{tool['url']}" target="_blank" class="{disabled_class}" style="text-decoration: none;">
+        <a href="{tool['url']}" target="_blank" style="text-decoration: none;">
             <div class="tool-card">
                 <div class="tool-icon">{tool['icon']}</div>
                 <div class="tool-name">{tool['name']}</div>
