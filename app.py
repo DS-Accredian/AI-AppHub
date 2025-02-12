@@ -121,6 +121,29 @@ st.markdown("""
     pointer-events: none; /* Ensures the overlay doesn’t block interactions */
     border-radius: inherit; /* Inherits the border-radius of the card */
    }
+   /* Tooltip styles */
+.disabled::before {
+    content: "This card is disabled"; /* Tooltip text */
+    position: absolute;
+    bottom: 110%; /* Position above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+/* Show tooltip on hover */
+.disabled:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
 </style>
 """, unsafe_allow_html=True)
 
