@@ -209,9 +209,9 @@ tools = [
         "description": "Generate post-read materials efficiently using AI Agents",
         "category": "Education"
     },
-    {
-        "name": "Brochure and Website Data Validator",
-        "icon": "🔒",
+     {
+        "name": "Validate Brochure & Website Data",
+        "icon": "📄",  # Document-related icon
         "url": "#",
         "description": "In Development",
         "category": "In Development",
@@ -219,7 +219,7 @@ tools = [
     },
     {
         "name": "Chat with Session Recording",
-        "icon": "🔒",
+        "icon": "💬🔴",  # Chat + recording indicator
         "url": "#",
         "description": "In Development",
         "category": "In Development",
@@ -227,7 +227,7 @@ tools = [
     },
     {
         "name": "Personalized Roadmap Generator",
-        "icon": "🔒",
+        "icon": "🛣️",  # Roadmap icon
         "url": "#",
         "description": "In Development",
         "category": "In Development",
@@ -235,7 +235,7 @@ tools = [
     },
     {
         "name": "Personalized TA",
-        "icon": "🔒",
+        "icon": "🎓",  # Education/TA-related icon
         "url": "#",
         "description": "In Development",
         "category": "In Development",
