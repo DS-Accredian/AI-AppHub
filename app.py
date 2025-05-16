@@ -240,6 +240,14 @@ tools = [
         "description": "In Development",
         "category": "In Development",
         "disabled": True
+    },
+    {
+        "name": "Job Scraper",
+        "icon": "💼",  # briefcase icon representing job
+        "url": "#",
+        "description": "In Development",
+        "category": "In Development",
+        "disabled": True
     }
 ]
 
