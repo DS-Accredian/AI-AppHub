@@ -251,7 +251,7 @@ tools = [
     },
     {
         "name": "Interview Question Generator",
-        "icon": "❓",  # Question mark icon for interview questions
+        "icon": "💼❓",  # Question mark icon for interview questions
         "url": "https://interviewquestionsgenerator-czxktws989ftkc5vejhkhm.streamlit.app/",
         "description": "Generate interview questions based on Topic",
         "category": "Education"    
