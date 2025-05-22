@@ -191,7 +191,7 @@ tools = [
     {
         "name": "AI PowerPoint Generator",
         "icon": "📑",
-        "url": "https://ai-powered-ppt-generator-4rqdhcbd7t97rcg6ypfbpx.streamlit.app/",
+        "url": "https://ai-powered-ppt-jgdfqiet6wej7qvlgxvcnf.streamlit.app/",
         "description": "Create professional presentations automatically using AI Agents",
         "category": "Productivity"
     },
