@@ -156,7 +156,7 @@ tools = [
     {
         "name": "AI Curriculum Designer",
         "icon": "📚",
-        "url": "https://curriculum-generator-rag-a5u5qr34wnnhu4fq4mm4hj.streamlit.app/",
+        "url": "https://curriculumgenerator-j3frvbcqdljvpm7krbghvk.streamlit.app/",
         "description": "Create comprehensive curriculum plans with AI assistance",
         "category": "Education"
     },
