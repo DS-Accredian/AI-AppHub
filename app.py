@@ -279,6 +279,7 @@ for i, category in enumerate(categories):
         use_container_width=True,
     ):
         st.session_state.selected_category = category
+selected_category = st.session_state.get("selected_category", "All")
 
 # Filter tools based on search and category
 filtered_tools = [
@@ -288,9 +289,9 @@ filtered_tools = [
     (selected_category == "All" or tool["category"] == selected_category)
 ]
 
-# Display tools in a grid
+# --- render ONLY the filtered tools -----------------
 cols = st.columns(4)
-for i, tool in enumerate(tools):
+for i, tool in enumerate(filtered_tools):          # <-- change here
     disabled_class = "disabled" if tool.get("disabled") else ""
     with cols[i % 4]:
         st.markdown(f"""
