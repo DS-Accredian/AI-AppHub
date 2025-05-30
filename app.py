@@ -177,7 +177,7 @@ tools = [
     {
         "name": "AI Brochure Chatbot",
         "icon": "📖",
-        "url": "https://brochure-n8jkhj2gvjmzvjz8sw2wdb.streamlit.app/",
+        "url": "https://qovesiulvn32emgr62h5ch.streamlit.app/",
         "description": "Interactive chatbot to chat with brochure contents",
         "category": "Marketing"
     },
